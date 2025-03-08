@@ -1,0 +1,70 @@
+classification:
+Target Feature => categorical in nature
+Binary : email spam or email not spam
+2 classes / segments/ groups
+Multi Class : Email Promotional or Email Social or EMail Important section
+
+titanic survival:
+1 : yes => people survived
+0 : no => people have not survived
+
+movie ratings/employee ratings:
+1 - lowest
+2
+3
+4
+5 - highest
+
+Evaluation Metrics:
+precision
+recall
+accuracy
+f1-score, f1-beta score
+
+Evaluation Metrics for classification:
+precision/recall/accuracy => >0.80 then we consider that model for final predictions
+
+precision: total true positives/(predicted positives)
+when the scenario demands negatives to be considered as negatives only
+and doesn't want them to be falsely considered as positives.
+indirect => false positive should be as less as possible
+example: important email(offer letter, financial aggrements) considered as spam
+
+recall: total true positives/(actual positives) 
+when the scenario demands positives to be considered atmost priority
+but model is predicting them as negatives
+indirect => false negative should be as less as possible
+example: diabetic patient is considered as non diabetic.
+
+accuracy:
+when the scenario doesnt demand much about positives and negatives(generic scenario), you can check accuracy
+
+f1-score:
+Useful in scenarios where both false positives and false negatives are equally undesirable
+
+f1-beta score:
+Allows you to adjust the importance of recall relative to precision using the "beta" parameter. 
+When beta > 1, recall is more important than precision. 
+When beta < 1, precision is more important than recall. 
+Useful when one type of error (false positive or false negative) is more critical than the other. 
+
+
+
+
+Evaluation Metrics for Regression:
+Mean squared error
+Mean absolute error
+RMSE
+R2 score=> Coefficient of Determination
+r2 score >0.80 then we consider that model for final predictions
+
+Flow for building an accurate Machine Learning Model:
+
+Data Ingestion/Gathering
+Basic data quality checks
+Separate x and y
+data preprocessing and cleaning
+train test split
+model building
+model evaluation
+final model for out of sample predictions
